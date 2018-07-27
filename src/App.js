@@ -1,11 +1,19 @@
 import React, { Component } from "react";
+import Ticketslist from "./components/TicketsList";
+import TicketFilter from "./components/TicketsFilter";
 import "./App.css";
+import logo from "./logo2.png";
+import { tickets } from "./tickets.json";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>asdas</p>
+        <img src={logo} alt="logo" className="logotype" />
+        <div className="Content">
+          <TicketFilter />
+          <Ticketslist tickets={tickets} />
+        </div>
       </div>
     );
   }
