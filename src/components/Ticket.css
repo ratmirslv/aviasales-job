@@ -1,4 +1,4 @@
-.Ticketstyle {
+.ticketStyle {
   width: 566px;
   height: 161px;
   box-shadow: 0 1px 4px rgba(91, 137, 164, 0.25);
@@ -8,7 +8,7 @@
   flex-direction: row;
 }
 
-.Button {
+.button {
   width: 160px;
   height: 56px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 0 #d64d08;
@@ -21,12 +21,82 @@
   margin: 80px 20px 25px 20px;
 }
 
-.TicketBuy {
-  border-right: 1px solid #ff0e0e;
-  background-color: rebeccapurple;
+.ticketBuy {
+  border-right: 1px solid #eceff1;
+  background-color: rgb(255, 255, 255);
 }
 
-.TicketInfo {
-  background-color: aqua;
+.ticketInfo {
+  background-color: rgb(255, 255, 255);
   width: 100%;
+  display: flex;
+}
+
+.departure {
+  margin-left: 25px;
+}
+.departureTime {
+  color: #4a4a4a;
+  font-family: "Open Sans";
+  font-size: 32px;
+  line-height: 26px;
+  margin: 25px 0 0 0;
+}
+.departureCity {
+  color: #4a4a4a;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Open Sans Semibold";
+  font-weight: 600;
+}
+
+.departureDate {
+  font-size: 12px;
+  line-height: 18px;
+  color: #8b9497;
+  font-family: "Open Sans";
+}
+
+.transfers {
+}
+.destination {
+}
+.destinationTime {
+  color: #4a4a4a;
+  font-family: "Open Sans";
+  font-size: 32px;
+  line-height: 26px;
+  padding-left: 21px;
+  margin: 25px 0 0 0;
+}
+
+.destinationCity {
+  color: #4a4a4a;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Open Sans Semibold";
+  font-weight: 600;
+}
+
+.destinationDate {
+  font-size: 12px;
+  line-height: 18px;
+  color: #8b9497;
+  font-family: "Open Sans";
+}
+.horizontalItem {
+  text-align: right;
+  width: 96px;
+  height: 1px;
+  background-color: #d2d5d6;
+}
+.transfersInfo {
+  color: #8b9497;
+  font-family: "Open Sans Semibold";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12.1px;
+  margin-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
 }

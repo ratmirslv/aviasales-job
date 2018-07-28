@@ -7,14 +7,9 @@ body {
 .App {
   text-align: center;
   width: 1024px;
-  height: 1328px;
   background-color: #f3f7fa;
   margin-left: auto;
   margin-right: auto;
-}
-
-.App img {
-  margin-top: 50px;
 }
 
 li {
@@ -35,4 +30,5 @@ ul {
 .logotype {
   width: 60px;
   height: 61px;
+  margin-top: 50px;
 }

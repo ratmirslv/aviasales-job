@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Ticketslist from "./components/TicketsList";
 import TicketFilter from "./components/TicketsFilter";
 import "./App.css";
-import logo from "./logo2.png";
+import logo from "./logo.png";
 import { tickets } from "./tickets.json";
 
 class App extends Component {
