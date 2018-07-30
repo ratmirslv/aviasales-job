@@ -19,11 +19,21 @@
 .currenciesName {
   width: 68px;
   height: 40px;
-  border-radius: 5px 0 0 5px;
-  background-color: #2196f3;
-  text-transform: uppercase;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #d2d5d6;
+  background-color: #ffffff;
 }
 
+.currenciesName:hover {
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  border: 1px solid #64b5f5;
+  background-color: #f2fcff;
+}
+
+.currenciesName:active {
+  background-color: #2196f3;
+}
 .filterTransfers {
   display: flex;
   flex-direction: column;
