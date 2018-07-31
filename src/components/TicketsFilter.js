@@ -11,67 +11,51 @@ class TicketsFilter extends Component {
       <div className="filterStyle">
         <div className="currencies">
           <div className="currenciesHeader">Валюта</div>
-          <button className="currenciesName">rub</button>
-          <button className="currenciesName">usd</button>
-          <button className="currenciesName">eur</button>
+          <div className="currenciesButtons">
+            <button className="rub">rub</button>
+            <button className="usd">usd</button>
+            <button className="eur">eur</button>
+          </div>
         </div>
         <div className="filterTransfers">
           <div className="TransfersHeader">Количество пересадок</div>
-          <form className="filterItem">
-            <label>
-              <input
-                name="all"
-                type="checkbox"
-                checked={this.state.isGoing}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            Все
-          </form>
-          <form className="filterItem">
-            <label>
-              <input
-                name="one"
-                type="checkbox"
-                checked={this.state.isGoing}
-                onChange={this.handleInputChange}
-              />
-              1 Пересадка
-            </label>
-          </form>
-          <form className="filterItem">
-            <label>
-              <input
-                name="two"
-                type="checkbox"
-                checked={this.state.isGoing}
-                onChange={this.handleInputChange}
-              />
-              2 Пересадки
-            </label>
-          </form>
-          <form className="filterItem">
-            <label>
-              <input
-                name="three"
-                type="checkbox"
-                checked={this.state.isGoing}
-                onChange={this.handleInputChange}
-              />
-              3 Пересадки
-            </label>
-          </form>
-          <form className="filterItem">
-            <label>
-              <input
-                name="four"
-                type="checkbox"
-                checked={this.state.isGoing}
-                onChange={this.handleInputChange}
-              />
-              4 Пересадки
-            </label>
-          </form>
+          <div className="filterItems">
+            <div className="filterItem">
+              <input id="all" type="checkbox" />
+              <label for="all">
+                <span />
+                Все
+              </label>
+            </div>
+            <div className="filterItem">
+              <input id="none" type="checkbox" />
+              <label for="none">
+                <span />
+                Без пересадок
+              </label>
+            </div>
+            <div className="filterItem">
+              <input id="one" type="checkbox" />
+              <label for="one">
+                <span />
+                1 пересадка
+              </label>
+            </div>
+            <div className="filterItem">
+              <input id="two" type="checkbox" />
+              <label for="two">
+                <span />
+                2 пересадки
+              </label>
+            </div>
+            <div className="filterItem">
+              <input id="three" type="checkbox" />
+              <label for="three">
+                <span />
+                3 пересадки
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     );

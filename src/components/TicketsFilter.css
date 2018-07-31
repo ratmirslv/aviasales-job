@@ -29,26 +29,39 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: left;
+  padding: 28px 0 0 0;
 }
 
-.currenciesName {
+.currenciesButtons button {
   width: 68px;
   height: 40px;
-  border-radius: 0 5px 5px 0;
   border: 1px solid #d2d5d6;
   background-color: #ffffff;
+  font-family: "Open Sans Semibold";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #2196f3;
 }
 
-.currenciesName:hover {
-  border-radius: 0 5px 5px 0;
+.currenciesButtons button:hover {
   cursor: pointer;
   border: 1px solid #64b5f5;
   background-color: #f2fcff;
 }
 
-.currenciesName:active {
+.currenciesButtons button:active {
   background-color: #2196f3;
+  color: #ffffff;
 }
+
+.currenciesButtons button:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
 .filterTransfers {
   display: flex;
   flex-direction: column;
@@ -56,10 +69,59 @@
   flex-wrap: wrap;
 }
 
-.filterItem {
-  text-align: left;
+.currencies {
+  padding: 15px 0 0 15px;
 }
 
-.currencies {
-  padding-left: 15px;
+.currenciesButtons {
+  display: flex;
+  padding: 12px 0 0 0;
+}
+
+.filterItems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rub {
+  border-radius: 5px 0 0 5px;
+}
+
+.eur {
+  border-radius: 0 5px 5px 0;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
+.filterItem {
+  color: #4a4a4a;
+  font-family: "Open Sans";
+  font-size: 13px;
+  line-height: 35px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-right: 7px;
+  vertical-align: middle;
+  background: url(../components/checkbox.png) no-repeat;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+  background-position: 0 -21px;
+}
+
+label {
+  cursor: pointer;
 }
