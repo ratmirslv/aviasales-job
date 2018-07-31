@@ -4,9 +4,13 @@
   background-color: #ffffff;
   margin-left: 103px;
   margin-right: 20px;
+  width: 232px;
+  height: 331px;
+  display: flex;
+  flex-direction: column;
 }
 
-.filterHeader {
+.currenciesHeader {
   color: #4a4a4a;
   font-family: "Open Sans Semibold";
   font-size: 12px;
@@ -14,6 +18,17 @@
   line-height: 19px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  text-align: left;
+}
+.TransfersHeader {
+  color: #4a4a4a;
+  font-family: "Open Sans Semibold";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .currenciesName {
@@ -37,8 +52,14 @@
 .filterTransfers {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
+  flex-wrap: wrap;
 }
 
 .filterItem {
   text-align: left;
+}
+
+.currencies {
+  padding-left: 15px;
 }

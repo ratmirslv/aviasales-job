@@ -10,13 +10,13 @@ class TicketsFilter extends Component {
     return (
       <div className="filterStyle">
         <div className="currencies">
-          <p className="filterHeader">Валюта</p>
+          <div className="currenciesHeader">Валюта</div>
           <button className="currenciesName">rub</button>
           <button className="currenciesName">usd</button>
           <button className="currenciesName">eur</button>
         </div>
         <div className="filterTransfers">
-          <p className="filterHeader">Количество пересадок</p>
+          <div className="TransfersHeader">Количество пересадок</div>
           <form className="filterItem">
             <label>
               <input
