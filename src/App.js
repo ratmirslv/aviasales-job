@@ -1,18 +1,42 @@
 import React, { Component } from "react";
-import Ticketslist from "./components/TicketsList";
+import TicketsList from "./components/TicketsList";
 import TicketFilter from "./components/TicketsFilter";
 import "./App.css";
 import logo from "./logo.png";
-import { tickets } from "./tickets.json";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tickets: [],
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://api.myjson.com/bins/ivves")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ tickets: data.tickets }),
+          this.setState({ data: data.tickets });
+      })
+      .catch(err => console.log(err));
+  }
+  updateTickets = config => {
+    this.setState(config);
+  };
+
   render() {
     return (
       <div className="App">
         <img src={logo} alt="logo" className="logotype" />
         <div className="Content">
-          <TicketFilter />
-          <Ticketslist tickets={tickets} />
+          <TicketFilter
+            tickets={this.state.tickets}
+            data={this.state.data}
+            update={this.updateTickets}
+          />
+          <TicketsList tickets={this.state.tickets} />
         </div>
       </div>
     );

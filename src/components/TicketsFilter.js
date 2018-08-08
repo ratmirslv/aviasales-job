@@ -6,6 +6,7 @@ class TicketsFilter extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     return (
       <div className="filterStyle">
@@ -22,35 +23,35 @@ class TicketsFilter extends Component {
           <div className="filterItems">
             <div className="filterItem">
               <input id="all" type="checkbox" />
-              <label for="all">
+              <label htmlFor="all">
                 <span />
                 Все
               </label>
             </div>
             <div className="filterItem">
               <input id="none" type="checkbox" />
-              <label for="none">
+              <label htmlFor="none">
                 <span />
                 Без пересадок
               </label>
             </div>
             <div className="filterItem">
-              <input id="one" type="checkbox" />
-              <label for="one">
+              <input id="one" type="checkbox" checked={false} />
+              <label htmlFor="one">
                 <span />
                 1 пересадка
               </label>
             </div>
             <div className="filterItem">
               <input id="two" type="checkbox" />
-              <label for="two">
+              <label htmlFor="two">
                 <span />
                 2 пересадки
               </label>
             </div>
             <div className="filterItem">
               <input id="three" type="checkbox" />
-              <label for="three">
+              <label htmlFor="three">
                 <span />
                 3 пересадки
               </label>
