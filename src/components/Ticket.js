@@ -25,7 +25,13 @@ class Ticket extends Component {
             <div className="departureDate">{ticket.departure_date}</div>
           </div>
           <div className="transfers">
-            <div className="transfersInfo">{`${ticket.stops} Пересадок`}</div>
+            {ticket.stops ? (
+              <div className="transfersInfo">
+                {ticket.stops} пересадк{+ticket.stops > 1 ? `и` : `а`}
+              </div>
+            ) : (
+              <div className="transfersInfo" />
+            )}
             <div className="transfersLine">
               <img src={lineairplane} alt="airplane" />
             </div>
