@@ -46,7 +46,7 @@
   color: #2196f3;
 }
 
-.currenciesButtons button:hover {
+.currenciesButtons button:hover:not(.active) {
   cursor: pointer;
   border: 1px solid #64b5f5;
   background-color: #f2fcff;
@@ -57,7 +57,7 @@
   color: #ffffff;
 }
 
-.currenciesButtons button:focus {
+.currenciesButtons .active {
   background-color: #2196f3;
   color: #ffffff;
 }

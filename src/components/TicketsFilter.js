@@ -77,13 +77,22 @@ class TicketsFilter extends Component {
         <div className="currencies">
           <div className="currenciesHeader">Валюта</div>
           <div className="currenciesButtons">
-            <button className="rub" onClick={this.handleClicRub}>
+            <button
+              className={this.props.current === "rub" ? "rub active" : "rub"}
+              onClick={this.handleClicRub}
+            >
               rub
             </button>
-            <button className="usd" onClick={this.handleClicUsd}>
+            <button
+              className={this.props.current === "usd" ? "usd active" : "usd"}
+              onClick={this.handleClicUsd}
+            >
               usd
             </button>
-            <button className="eur" onClick={this.handleClicEur}>
+            <button
+              className={this.props.current === "eur" ? "eur active" : "eur"}
+              onClick={this.handleClicEur}
+            >
               eur
             </button>
           </div>
