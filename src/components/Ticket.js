@@ -7,13 +7,29 @@ class Ticket extends Component {
     super(props);
     this.state = {};
   }
+  ViewCurrency = (price, current) => {
+    switch (current) {
+      case "rub":
+        return `${price} ₽`;
+      case "usd":
+        return `${Math.floor(price / 30)} $`;
+      case "eur":
+        return `${Math.floor(price / 70)} €`;
+      default:
+        return price;
+    }
+  };
+
   render() {
-    const { ticket } = this.props;
+    const { ticket, current } = this.props;
     return (
       <div className="ticketStyle">
         <div className="ticketBuy">
+          <div className="air-logo">
+            <img src={require(`../img/${ticket.carrier}.png`)} alt="logoAir" />
+          </div>
           <button className="button">
-            Купить <br /> за {"\n" + ticket.price + " \u20BD"}
+            Купить <br /> за {this.ViewCurrency(ticket.price, current)}
           </button>
         </div>
         <div className="ticketInfo">
@@ -27,7 +43,8 @@ class Ticket extends Component {
           <div className="transfers">
             {ticket.stops ? (
               <div className="transfersInfo">
-                {ticket.stops} пересадк{+ticket.stops > 1 ? `и` : `а`}
+                {ticket.stops} пересадк
+                {+ticket.stops > 1 ? `и` : `а`}
               </div>
             ) : (
               <div className="transfersInfo" />

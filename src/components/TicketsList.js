@@ -8,12 +8,13 @@ class TicketsList extends Component {
   }
 
   render() {
-    const { tickets } = this.props;
+    const { tickets, current } = this.props;
+
     return (
       <ul className="TicketsList">
         {tickets.map(ticket => (
           <li>
-            <Ticket ticket={ticket} />
+            <Ticket ticket={ticket} current={this.props.current} />
           </li>
         ))}
       </ul>

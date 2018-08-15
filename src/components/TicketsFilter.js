@@ -56,15 +56,36 @@ class TicketsFilter extends Component {
       });
     }
   };
+  handleClicRub = () => {
+    this.props.update({
+      current: "rub"
+    });
+  };
+  handleClicUsd = () => {
+    this.props.update({
+      current: "usd"
+    });
+  };
+  handleClicEur = () => {
+    this.props.update({
+      current: "eur"
+    });
+  };
   render() {
     return (
       <div className="filterStyle">
         <div className="currencies">
           <div className="currenciesHeader">Валюта</div>
           <div className="currenciesButtons">
-            <button className="rub">rub</button>
-            <button className="usd">usd</button>
-            <button className="eur">eur</button>
+            <button className="rub" onClick={this.handleClicRub}>
+              rub
+            </button>
+            <button className="usd" onClick={this.handleClicUsd}>
+              usd
+            </button>
+            <button className="eur" onClick={this.handleClicEur}>
+              eur
+            </button>
           </div>
         </div>
         <div className="filterTransfers">

@@ -20,7 +20,7 @@
   font-size: 16px;
   font-family: "Open Sans Semibold";
   font-weight: 600;
-  margin: 80px 20px 25px 20px;
+  margin: 20px 20px 25px 20px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 1px 0 #f7661d;
   border-radius: 5px;
   background-color: #ff8124;
@@ -34,7 +34,13 @@
 .ticketBuy {
   border-right: 1px solid #eceff1;
   background-color: rgb(255, 255, 255);
-  display: flex;
+}
+
+.air-logo {
+  width: 120px;
+  height: 35px;
+  margin-top: 25px;
+  margin-left: 40px;
 }
 
 .ticketInfo {
