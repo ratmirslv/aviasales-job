@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Ticket from "./Ticket";
+import Ticket from "../components/Ticket";
 import "./TicketsList.css";
+import shortid from "shortid";
 class TicketsList extends Component {
   constructor(props) {
     super(props);
@@ -8,12 +9,12 @@ class TicketsList extends Component {
   }
 
   render() {
-    const { tickets, current } = this.props;
+    const { tickets } = this.props;
 
     return (
       <ul className="TicketsList">
         {tickets.map(ticket => (
-          <li>
+          <li key={shortid.generate()}>
             <Ticket ticket={ticket} current={this.props.current} />
           </li>
         ))}

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import TicketsList from "./components/TicketsList";
-import TicketFilter from "./components/TicketsFilter";
+import TicketsList from "./TicketsList";
+import TicketFilter from "../components/TicketsFilter";
 import "./App.css";
-import logo from "./logo.png";
+import logo from "../img/logo.png";
 
 class App extends Component {
   constructor(props) {

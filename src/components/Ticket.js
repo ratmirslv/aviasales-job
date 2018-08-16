@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ticketStyle from "./Ticket.css";
-import lineairplane from "../lineairplane.png";
+import "./Ticket.css";
+import lineairplane from "../img/lineairplane.png";
 
 class Ticket extends Component {
   constructor(props) {
@@ -19,7 +19,10 @@ class Ticket extends Component {
         return price;
     }
   };
-
+  handleClickTicket = () => {
+    const { ticket, current } = this.props;
+    alert(`Покупка билета за ${this.ViewCurrency(ticket.price, current)}`);
+  };
   render() {
     const { ticket, current } = this.props;
     return (
@@ -28,7 +31,7 @@ class Ticket extends Component {
           <div className="air-logo">
             <img src={require(`../img/${ticket.carrier}.png`)} alt="logoAir" />
           </div>
-          <button className="button">
+          <button className="button" onClick={this.handleClickTicket}>
             Купить <br /> за {this.ViewCurrency(ticket.price, current)}
           </button>
         </div>

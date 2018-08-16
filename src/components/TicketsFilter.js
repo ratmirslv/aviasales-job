@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import filterStyle from "./TicketsFilter.css";
+import "./TicketsFilter.css";
 
 class TicketsFilter extends Component {
   constructor(props) {
@@ -18,16 +18,15 @@ class TicketsFilter extends Component {
     const name = e.target.name;
     const data = this.props.data;
     const tickets = this.props.tickets;
-    console.log(e.target.name);
     this.setState({ [name]: checked });
     if (checked) {
-      const filterData = data.filter(item => item["stops"] == value);
+      const filterData = data.filter(item => item["stops"] === +value);
       filterData.forEach(item => tickets.push(item));
       this.props.update({
         tickets: tickets
       });
     } else {
-      const filterData = tickets.filter(item => item["stops"] != value);
+      const filterData = tickets.filter(item => item["stops"] !== +value);
       this.props.update({
         tickets: filterData
       });
