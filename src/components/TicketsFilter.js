@@ -55,17 +55,17 @@ class TicketsFilter extends Component {
       });
     }
   };
-  handleClicRub = () => {
+  handleClickRub = () => {
     this.props.update({
       current: "rub"
     });
   };
-  handleClicUsd = () => {
+  handleClickUsd = () => {
     this.props.update({
       current: "usd"
     });
   };
-  handleClicEur = () => {
+  handleClickEur = () => {
     this.props.update({
       current: "eur"
     });
@@ -78,19 +78,19 @@ class TicketsFilter extends Component {
           <div className="currenciesButtons">
             <button
               className={this.props.current === "rub" ? "rub active" : "rub"}
-              onClick={this.handleClicRub}
+              onClick={this.handleClickRub}
             >
               rub
             </button>
             <button
               className={this.props.current === "usd" ? "usd active" : "usd"}
-              onClick={this.handleClicUsd}
+              onClick={this.handleClickUsd}
             >
               usd
             </button>
             <button
               className={this.props.current === "eur" ? "eur active" : "eur"}
-              onClick={this.handleClicEur}
+              onClick={this.handleClickEur}
             >
               eur
             </button>
