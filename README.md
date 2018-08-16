@@ -1,3 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Тестовое задание Aviasales Frontend ( https://github.com/KosyanMedia/test-tasks/tree/master/aviasales )
 
-## React app Aviasales
+[Мое решение](https://ratmirslv.github.io)
+
+- json подгружается с внешнего сервера myjson.com
