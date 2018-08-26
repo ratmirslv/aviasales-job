@@ -1,6 +1,6 @@
 ## Тестовое задание Aviasales Frontend [Задание](https://github.com/KosyanMedia/test-tasks/tree/master/aviasales)
 
-## Ссылка на [Мое решение](https://ratmirslv.github.io)
+## Ссылка на [Мое решение](https://ratmirslv.github.io/aviasales)
 
 - json подгружается с внешнего сервера myjson.com
 
