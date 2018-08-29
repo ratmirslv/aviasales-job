@@ -7,8 +7,8 @@ class Ticket extends Component {
     super(props);
     this.state = {};
   }
-  ViewCurrency = (price, current) => {
-    switch (current) {
+  ViewCurrency = (price, currency) => {
+    switch (currency) {
       case "rub":
         return `${price} ₽`;
       case "usd":
@@ -20,11 +20,11 @@ class Ticket extends Component {
     }
   };
   handleClickTicket = () => {
-    const { ticket, current } = this.props;
-    alert(`Покупка билета за ${this.ViewCurrency(ticket.price, current)}`);
+    const { ticket, currency } = this.props;
+    alert(`Покупка билета за ${this.ViewCurrency(ticket.price, currency)}`);
   };
   render() {
-    const { ticket, current } = this.props;
+    const { ticket, currency } = this.props;
     return (
       <div className="ticketStyle">
         <div className="ticketBuy">
@@ -32,7 +32,7 @@ class Ticket extends Component {
             <img src={require(`../img/${ticket.carrier}.png`)} alt="logoAir" />
           </div>
           <button className="button" onClick={this.handleClickTicket}>
-            Купить <br /> за {this.ViewCurrency(ticket.price, current)}
+            Купить <br /> за {this.ViewCurrency(ticket.price, currency)}
           </button>
         </div>
         <div className="ticketInfo">

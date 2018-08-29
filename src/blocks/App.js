@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       tickets: [],
       data: [],
-      current: "rub"
+      currency: "rub"
     };
   }
 
@@ -36,11 +36,11 @@ class App extends Component {
             tickets={this.state.tickets}
             data={this.state.data}
             update={this.updateTickets}
-            current={this.state.current}
+            currency={this.state.currency}
           />
           <TicketsList
             tickets={this.state.tickets}
-            current={this.state.current}
+            currency={this.state.currency}
           />
         </div>
       </div>

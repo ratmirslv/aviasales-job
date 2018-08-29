@@ -15,7 +15,7 @@ class TicketsList extends Component {
       <ul className="TicketsList">
         {tickets.map(ticket => (
           <li key={shortid.generate()}>
-            <Ticket ticket={ticket} current={this.props.current} />
+            <Ticket ticket={ticket} currency={this.props.currency} />
           </li>
         ))}
       </ul>
